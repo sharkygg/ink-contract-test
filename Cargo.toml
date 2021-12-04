@@ -1,0 +1,18 @@
+[package]
+name = "contract-test"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ink_env = { version = "3.0.0-rc6", default-features = false }
+cargo-contract = { path="./cargo-contract" }
+url = { version = "2.2.2", features = ["serde"] }
+anyhow = "1.0.45"
+
+[features]
+default = ["std"]
+std = [
+    "ink_env/std"
+]
