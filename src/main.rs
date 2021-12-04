@@ -6,11 +6,14 @@ use std::str::FromStr;
 use anyhow::Result;
 
 const WS_ENDPOINT: &str = "ws://127.0.0.1:9944";
-const MARKET_CONTRACT_ADDR: &str = "5C6WcBffDQsbQPenhsUFwKu2LbziUoe3sskBc9cRyhdgfMhi";
+
+const MARKET_CONTRACT_ADDR: &str = "5DVJQ7rK6L5fgRvDQpjQ7CMweyXAaYXwRBKMQY7yKhGo5hqk";
 const MARKET_ABI_PATH: &str = "./release/services_market.json";
-const STAT_CONTRACT_ADDR: &str = "5HZmVV4h6ACyPNWFFtAbTW3dG5ohK7ZAWyt3nuznfiDRWifF";
+
+const STAT_CONTRACT_ADDR: &str = "5CGW7GKo13RdxwMFuYuUEw5eAq3eTM7G9fGk16p3EzKuGi3r";
 const STAT_ABI_PATH: &str = "./release/services_statistics.json";
-const SURI: &str = "//Alice";
+
+const SURI: &str = "0xe40891ed4fa2eb6b8b89b1d641ae72e8c1ba383d809eeba64131b37bf0aa3898";
 const GAS_LIMIT: u64 = 50000000000;
 
 fn main() {
@@ -44,7 +47,7 @@ fn main() {
     // }
 
     // exe add_service
-    const uuid: &'static str = "3";
+    const uuid: &'static str = "1";
     let result = exec(
         MARKET_CONTRACT_ADDR.to_string(),
         MARKET_ABI_PATH.to_string(),
@@ -56,7 +59,7 @@ fn main() {
                           format!("\"{}\"", "test1"), //logo
                           String::from("12345678"), //createTime
                           format!("\"{}\"", "test1"), //providerName
-                          format!("\"{}\"", "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"), //providerOwner
+                          format!("\"{}\"", "5F7Xv7RaJe8BBNULSuRTXWtfn68njP1NqQL5LLf41piRcEJJ"), //providerOwner
                           format!("\"{}\"", "test1"), //usage
                           format!("\"{}\"", "test1"), //schema
                           format!("\"{}\"", "test1"), //pricePlan
